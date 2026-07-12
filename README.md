@@ -31,8 +31,6 @@ Site estático (HTML/CSS/JS, sem build) da **Raro Tecnologia**, com foco em **Au
 └── CNAME               # domínio custom (rarotecnologia.com)
 ```
 
-> A pasta `originais/` (fontes de design: renders do Gemini e arquivo Affinity `.af`) fica fora do repositório por `.gitignore`.
-
 ## Rodar localmente
 
 Como é estático, basta um servidor HTTP simples na raiz do projeto:
