@@ -1,8 +1,8 @@
 /* Raro Tecnologia — estilos modularizados.
    A ordem dos @import define a cascata; mantenha-a.
    Ao editar um módulo em css/, suba a versão (?v=) aqui e no <link> das páginas. */
-@import 'css/base.css?v=8';         /* reset, tokens (:root), tipografia, botões, section-tag */
-@import 'css/layout.css?v=8';       /* header, nav, logo lockup, seletor de idioma, hero */
-@import 'css/sections.css?v=8';     /* métricas, serviços, sobre, contato, footer, páginas legais */
-@import 'css/responsive.css?v=8';   /* breakpoints originais (1024 / 768 / 480) */
-@import 'css/enhancements.css?v=8'; /* CTAs, botões WhatsApp, cena de chat, ajustes finos */
+@import 'css/base.css?v=9';         /* reset, tokens (:root), tipografia, botões, section-tag */
+@import 'css/layout.css?v=9';       /* header, nav, logo lockup, seletor de idioma, hero */
+@import 'css/sections.css?v=9';     /* métricas, serviços, sobre, contato, footer, páginas legais */
+@import 'css/responsive.css?v=9';   /* breakpoints originais (1024 / 768 / 480) */
+@import 'css/enhancements.css?v=9'; /* CTAs, botões WhatsApp, cena de chat, ajustes finos */

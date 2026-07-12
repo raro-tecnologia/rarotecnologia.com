@@ -50,7 +50,7 @@
 
 /* Services Section */
 .services {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     background-color: var(--color-surface);
 }
 
@@ -144,7 +144,7 @@
 
 /* About Section */
 .about {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     background-color: var(--color-surface-alt);
 }
 
@@ -253,7 +253,7 @@
 
 /* Contact Section */
 .contact {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     background-color: var(--color-surface);
 }
 
