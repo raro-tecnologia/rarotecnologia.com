@@ -503,4 +503,25 @@ function initLanguage() {
     setLanguage(savedLang);
 }
 
+// Menu mobile (hambúrguer)
+function initMobileNav() {
+    const nav = document.querySelector('.nav');
+    const toggle = document.querySelector('.nav-toggle');
+    if (!nav || !toggle) return;
+
+    toggle.addEventListener('click', function () {
+        const open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            nav.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', initLanguage);
+document.addEventListener('DOMContentLoaded', initMobileNav);
