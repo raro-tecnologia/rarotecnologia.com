@@ -1,0 +1,285 @@
+/* ============ RaRo add-ons: hero visual, CTAs, metrics, WhatsApp ============ */
+
+/* Header CTA */
+.nav-links a.btn-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.55rem 1.15rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.3);
+    transition: all var(--transition);
+    white-space: nowrap;
+}
+.nav-links a.btn-nav-cta:hover { background: var(--color-primary-dark); color: #fff; transform: translateY(-1px); }
+.btn-nav-cta svg { width: 17px; height: 17px; }
+
+/* Hero two-column layout with emblem */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    padding: var(--spacing-3xl) 0;
+}
+.hero-text { min-width: 0; }
+.hero-visual { display: flex; justify-content: center; align-items: center; }
+.hero-emblem {
+    width: min(360px, 32vw);
+    height: auto;
+    filter: drop-shadow(0 24px 60px rgba(37, 99, 235, 0.4));
+    animation: floaty 6s ease-in-out infinite;
+}
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+.hero-actions { display: flex; gap: var(--spacing-sm); flex-wrap: wrap; align-items: center; }
+
+/* Buttons: WhatsApp + ghost */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp:hover {
+    background: #1ebe5b;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+}
+.btn-whatsapp svg { width: 20px; height: 20px; }
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.btn-ghost:hover { color: #fff; border-color: rgba(255, 255, 255, 0.6); background: rgba(255, 255, 255, 0.06); }
+
+/* Metrics band icons */
+.metric-value svg { width: 34px; height: 34px; color: var(--color-primary); }
+
+/* Contact WhatsApp card */
+.contact-card {
+    padding: var(--spacing-xl);
+    min-height: 0;
+    max-width: 440px;
+    width: 100%;
+    justify-self: end;
+}
+.contact-wa { margin-top: 0; }
+.contact-card-note {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+.contact-phone {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    margin-top: var(--spacing-md);
+}
+
+/* Footer written email */
+.footer-email {
+    display: inline-block;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    transition: color var(--transition);
+}
+.footer-email:hover { color: #ffffff; }
+
+/* Footer social icons */
+.footer-social { display: flex; gap: 0.75rem; margin-top: var(--spacing-md); }
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+    transition: all var(--transition);
+}
+.footer-social a:hover { color: #fff; border-color: var(--color-primary); background: rgba(37, 99, 235, 0.18); transform: translateY(-2px); }
+.footer-social svg { width: 20px; height: 20px; }
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+    z-index: 200;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.whatsapp-float svg { width: 33px; height: 33px; color: #fff; position: relative; z-index: 2; }
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); }
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    animation: wa-pulse 2.4s infinite;
+}
+@keyframes wa-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+    70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Hero chat-automation scene */
+.chat-scene {
+    position: relative;
+    width: min(400px, 40vw);
+    aspect-ratio: 1 / 1.05;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.chat-scene::before {
+    content: '';
+    position: absolute;
+    width: 82%;
+    height: 82%;
+    right: 4%;
+    top: 2%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.28), rgba(37, 99, 235, 0.14) 45%, transparent 70%);
+    filter: blur(12px);
+    z-index: 0;
+}
+.bot-mascot {
+    position: absolute;
+    top: -4%;
+    right: 6%;
+    width: 45%;
+    filter: drop-shadow(0 10px 30px rgba(37, 211, 102, 0.35));
+    animation: floaty 6s ease-in-out infinite;
+    z-index: 1;
+}
+.chat-card {
+    position: relative;
+    z-index: 2;
+    width: 92%;
+    background: rgba(15, 21, 36, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 15px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.chat-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 12px;
+}
+.chat-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+.chat-avatar svg { width: 22px; height: 22px; }
+.chat-meta { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.chat-meta strong { color: #fff; font-size: 0.9rem; font-weight: 600; }
+.chat-status { color: #25d366; font-size: 0.72rem; display: flex; align-items: center; gap: 5px; }
+.chat-status::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #25d366;
+    box-shadow: 0 0 8px #25d366;
+}
+.chat-wa { margin-left: auto; color: #25d366; display: flex; }
+.chat-wa svg { width: 22px; height: 22px; }
+.chat-body { display: flex; flex-direction: column; gap: 9px; }
+.bubble {
+    max-width: 84%;
+    padding: 9px 13px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    border-radius: 14px;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: bubble-in 0.5s ease forwards;
+}
+.bubble.in {
+    align-self: flex-start;
+    background: #eef2f7;
+    color: #0f172a;
+    border-bottom-left-radius: 4px;
+    animation-delay: 0.6s;
+}
+.bubble.out {
+    align-self: flex-end;
+    background: #25d366;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+    animation-delay: 1.2s;
+}
+.bubble.typing {
+    align-self: flex-start;
+    background: #eef2f7;
+    display: flex;
+    gap: 4px;
+    padding: 12px 14px;
+    animation-delay: 1.9s;
+}
+.bubble.typing span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #94a3b8;
+    animation: typing-dot 1.2s infinite;
+}
+.bubble.typing span:nth-child(2) { animation-delay: 0.2s; }
+.bubble.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bubble-in { to { opacity: 1; transform: translateY(0); } }
+@keyframes typing-dot {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30% { transform: translateY(-4px); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) 0;
+    }
+    .hero-visual { order: 0; margin-top: var(--spacing-xs); }
+    .chat-scene { width: min(340px, 86vw); }
+    .hero-actions { gap: 0.75rem; }
+    .whatsapp-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
+    .whatsapp-float svg { width: 29px; height: 29px; }
+    .footer-social { justify-content: center; }
+}

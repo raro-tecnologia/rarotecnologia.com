@@ -1,0 +1,115 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .about-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .contact-card { justify-self: stretch; max-width: none; }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 16px; }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-xs);
+        height: auto;
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .logo { width: 100%; text-align: center; }
+
+    .nav-links {
+        gap: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .hero-content {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .metrics {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .metric-divider { display: none; }
+
+    .metric-value { font-size: 1.75rem; }
+
+    .services,
+    .about,
+    .contact {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section-header { margin-bottom: var(--spacing-xl); }
+
+    .about h2,
+    .contact h2 { text-align: left; }
+
+    .section-header { text-align: left; }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 var(--spacing-sm); }
+
+    .hero h1 { font-size: 1.85rem; }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card { padding: var(--spacing-md); }
+
+    .service-number { font-size: 2.25rem; }
+
+    .about-card { padding: var(--spacing-lg); }
+
+    .contact-card { padding: var(--spacing-lg); }
+
+    .contact-item a { font-size: 1rem; }
+}
