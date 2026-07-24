@@ -49,7 +49,7 @@ python3 -m http.server 8000
 
 ## Contato / marca
 
-- WhatsApp: +55 44 93618-0471 · Instagram: [@raro_tecnologia](https://instagram.com/raro_tecnologia) · E-mail: contato@rarotecnologia.com
+- WhatsApp: +55 44 3170-1799 · Instagram: [@raro_tecnologia](https://instagram.com/raro_tecnologia) · E-mail: contato@rarotecnologia.com
 - Uso da marca: **"Raro Tecnologia"** em texto/prosa; **"RARO"** apenas como marca/logo.
 
 ## Deploy
