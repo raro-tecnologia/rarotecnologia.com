@@ -1,0 +1,25 @@
+# Raro Tecnologia
+
+> A Raro Tecnologia (RaRo) é uma empresa brasileira de automação de processos, agentes de inteligência artificial e consultoria em IA, sediada em Maringá/PR. É Provedora de Tecnologia certificada pela Meta, com integração oficial à WhatsApp Business API. Atende de startups a empresas consolidadas em todo o Brasil.
+
+Slogan: "IA que atende, humano que resolve."
+CNPJ: 65.977.227/0001-37
+WhatsApp: (44) 3170-1799
+E-mail: contato@rarotecnologia.com
+Site: https://rarotecnologia.com/
+
+## Serviços
+
+- **Automação de processos**: automação de atendimento, fluxos de trabalho e tarefas repetitivas, integrando WhatsApp, sistemas internos e outros canais.
+- **Agentes de IA**: agentes que atendem, respondem e qualificam clientes 24 horas por dia, treinados com o conhecimento do negócio, no tom de voz da marca e integrados aos sistemas do cliente.
+- **Consultoria em IA**: escolha de ferramentas, arquitetura, casos de uso e boas práticas para adotar inteligência artificial com segurança.
+
+## Produto
+
+- [Prontto.AI](https://prontto.ai/): plataforma de atendimento com IA que responde leads no WhatsApp e no Instagram em segundos, qualifica a conversa e preenche o CRM sozinha.
+
+## Páginas
+
+- [Site institucional](https://rarotecnologia.com/): serviços, sobre a empresa e contato (português e inglês).
+- [Termos de serviço](https://rarotecnologia.com/terms.html)
+- [Política de privacidade](https://rarotecnologia.com/privacy.html)
