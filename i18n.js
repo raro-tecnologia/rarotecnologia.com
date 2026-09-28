@@ -70,7 +70,7 @@ const translations = {
 
         // Terms Page
         'terms.title': 'Termos de Serviço',
-        'terms.updated': 'Última atualização: Abril de 2026',
+        'terms.updated': 'Última atualização: Setembro de 2026',
         'terms.h1': '1. Aceitação dos Termos',
         'terms.p1': 'Ao acessar e utilizar os serviços fornecidos pela Raro Tecnologia ("Empresa", "nós" ou "nosso"), você concorda em estar vinculado a estes Termos de Serviço ("Termos"). Se você não concordar com estes Termos, por favor não utilize nossos serviços.',
         'terms.h2': '2. Descrição dos Serviços',
@@ -150,7 +150,7 @@ const translations = {
 
         // Privacy Page
         'privacy.title': 'Política de Privacidade',
-        'privacy.updated': 'Última atualização: Abril de 2026',
+        'privacy.updated': 'Última atualização: Setembro de 2026',
         'privacy.h1': '1. Introdução',
         'privacy.p1': 'A Raro Tecnologia ("Empresa", "nós" ou "nosso") está comprometida em proteger sua privacidade e os dados pessoais de seus clientes e dos usuários finais. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso site, utiliza nossos serviços ou acessa nossos produtos SaaS (Software como Serviço), em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e as políticas dos provedores de serviços integrados.',
         'privacy.p1b': 'Por favor, leia esta Política de Privacidade atentamente. Ao usar nosso site ou serviços, você consente com as práticas descritas nesta política.',
@@ -322,7 +322,7 @@ const translations = {
 
         // Terms Page
         'terms.title': 'Terms of Service',
-        'terms.updated': 'Last updated: April 2026',
+        'terms.updated': 'Last updated: September 2026',
         'terms.h1': '1. Acceptance of Terms',
         'terms.p1': 'By accessing and using the services provided by Raro Tecnologia ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.',
         'terms.h2': '2. Description of Services',
@@ -402,7 +402,7 @@ const translations = {
 
         // Privacy Page
         'privacy.title': 'Privacy Policy',
-        'privacy.updated': 'Last updated: April 2026',
+        'privacy.updated': 'Last updated: September 2026',
         'privacy.h1': '1. Introduction',
         'privacy.p1': 'Raro Tecnologia ("Company," "we," "us," or "our") is committed to protecting your privacy and the personal data of our clients and end users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or access our SaaS (Software as a Service) products, in compliance with the Brazilian General Data Protection Law (LGPD - Law No. 13,709/2018) and the policies of integrated service providers.',
         'privacy.p1b': 'Please read this Privacy Policy carefully. By using our website or services, you consent to the practices described in this policy.',
