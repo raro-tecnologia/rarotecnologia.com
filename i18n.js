@@ -62,6 +62,12 @@ const translations = {
         'footer.terms': 'Termos de Serviço',
         'footer.privacy': 'Política de Privacidade',
 
+        // Shared legal links (Terms + Privacy pages)
+        'legal.link.ytTerms': 'Termos de Serviço do YouTube',
+        'legal.link.googlePrivacy': 'Política de Privacidade do Google',
+        'legal.link.googleSecurity': 'página de permissões de segurança do Google',
+        'legal.mid.eComA': 'e com a',
+
         // Terms Page
         'terms.title': 'Termos de Serviço',
         'terms.updated': 'Última atualização: Abril de 2026',
@@ -137,7 +143,9 @@ const translations = {
         'terms.p9': 'Reservamo-nos o direito de modificar estes Termos a qualquer momento. As alterações entrarão em vigor após a publicação em nosso site. Seu uso continuado de nossos serviços após quaisquer alterações constitui aceitação dos Termos modificados.',
         'terms.h10': '13. Lei Aplicável e Foro',
         'terms.p10': 'Estes Termos serão regidos e interpretados de acordo com as leis da República Federativa do Brasil. Fica eleito o foro da comarca de Astorga, Estado do Paraná, para dirimir quaisquer controvérsias oriundas destes Termos, com renúncia a qualquer outro, por mais privilegiado que seja.',
-        'terms.h11': '14. Informações de Contato',
+        'terms.h10b': '14. Serviços de API do YouTube',
+        'terms.p10b': 'Quem utiliza recursos da RaRo Tecnologia que dependem dos Serviços de API do YouTube (YouTube API Services), como a ferramenta RaRo Shorts, também concorda com os',
+        'terms.h11': '15. Informações de Contato',
         'terms.p11': 'Se você tiver alguma dúvida sobre estes Termos de Serviço, entre em contato conosco:',
 
         // Privacy Page
@@ -231,7 +239,16 @@ const translations = {
         'privacy.p10': 'Nossos serviços não são direcionados a indivíduos menores de 18 anos. Não coletamos intencionalmente informações pessoais de crianças. Se tomarmos conhecimento de que coletamos informações pessoais de uma criança, tomaremos medidas para excluir essas informações.',
         'privacy.h11': '14. Alterações nesta Política de Privacidade',
         'privacy.p11': 'Podemos atualizar esta Política de Privacidade periodicamente. As alterações serão publicadas nesta página com uma data de "Última atualização" atualizada. Encorajamos você a revisar esta Política de Privacidade periodicamente para se manter informado sobre como protegemos suas informações.',
-        'privacy.h12': '15. Contato',
+        'privacy.h11b': '15. Serviços de API do YouTube',
+        'privacy.p11b': 'A RaRo Tecnologia utiliza os Serviços de API do YouTube (YouTube API Services) por meio de uma ferramenta interna, a RaRo Shorts, usada para enviar e gerenciar vídeos curtos (Shorts) no canal oficial da RaRo no YouTube (youtube.com/@raro_tecnologia). Essa integração é utilizada exclusivamente no canal da própria RaRo e não acessa dados de canais ou de usuários de terceiros.',
+        'privacy.p11b2': 'Ao utilizar esses recursos, você concorda com os',
+        'privacy.p11b4': 'Por meio dessa integração, acessamos e armazenamos:',
+        'privacy.li11b.1': 'Dados do canal do YouTube da própria RaRo (identificação e estatísticas básicas do canal), usados apenas para gerenciar as publicações',
+        'privacy.li11b.2': 'Metadados dos vídeos enviados pela ferramenta (título, descrição, tags, miniatura e status de publicação), usados para publicar e organizar os Shorts no canal',
+        'privacy.li11b.3': 'Tokens de autorização OAuth concedidos pelo Google/YouTube, armazenados de forma segura e usados exclusivamente para autenticar a RaRo Shorts junto à API do YouTube',
+        'privacy.p11b5': 'Esses dados não são vendidos nem compartilhados com terceiros. Eles permanecem armazenados enquanto a ferramenta RaRo Shorts estiver em uso, e os tokens de autorização podem ser revogados a qualquer momento na',
+        'privacy.p11b6': 'Para solicitar a exclusão desses dados, entre em contato pelo e-mail',
+        'privacy.h12': '16. Contato',
         'privacy.p12': 'Se você tiver alguma dúvida sobre esta Política de Privacidade ou nossas práticas de privacidade, entre em contato conosco:'
     },
     'en': {
@@ -296,6 +313,12 @@ const translations = {
         'footer.rights': 'All rights reserved.',
         'footer.terms': 'Terms of Service',
         'footer.privacy': 'Privacy Policy',
+
+        // Shared legal links (Terms + Privacy pages)
+        'legal.link.ytTerms': 'YouTube Terms of Service',
+        'legal.link.googlePrivacy': 'Google Privacy Policy',
+        'legal.link.googleSecurity': 'Google security permissions page',
+        'legal.mid.eComA': 'and the',
 
         // Terms Page
         'terms.title': 'Terms of Service',
@@ -372,7 +395,9 @@ const translations = {
         'terms.p9': 'We reserve the right to modify these Terms at any time. Changes will be effective upon posting to our website. Your continued use of our services after any changes constitutes acceptance of the modified Terms.',
         'terms.h10': '13. Governing Law and Jurisdiction',
         'terms.p10': 'These Terms shall be governed by and construed in accordance with the laws of the Federative Republic of Brazil. The courts of Astorga, State of Paraná, shall have exclusive jurisdiction over any disputes arising from these Terms, with waiver of any other jurisdiction, however privileged.',
-        'terms.h11': '14. Contact Information',
+        'terms.h10b': '14. YouTube API Services',
+        'terms.p10b': 'Anyone using RaRo Tecnologia features that rely on the YouTube API Services, such as the RaRo Shorts tool, also agrees to the',
+        'terms.h11': '15. Contact Information',
         'terms.p11': 'If you have any questions about these Terms of Service, please contact us at:',
 
         // Privacy Page
@@ -466,7 +491,16 @@ const translations = {
         'privacy.p10': 'Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child, we will take steps to delete that information.',
         'privacy.h11': '14. Changes to This Privacy Policy',
         'privacy.p11': 'We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.',
-        'privacy.h12': '15. Contact Us',
+        'privacy.h11b': '15. YouTube API Services',
+        'privacy.p11b': 'RaRo Tecnologia uses the YouTube API Services through an internal tool, RaRo Shorts, used to upload and manage short videos (Shorts) on RaRo\'s official YouTube channel (youtube.com/@raro_tecnologia). This integration is used exclusively on RaRo\'s own channel and does not access data from third-party channels or users.',
+        'privacy.p11b2': 'By using these features, you agree to the',
+        'privacy.p11b4': 'Through this integration, we access and store:',
+        'privacy.li11b.1': 'RaRo\'s own YouTube channel data (channel identification and basic statistics), used only to manage its publications',
+        'privacy.li11b.2': 'Metadata of videos uploaded through the tool (title, description, tags, thumbnail, and publication status), used to publish and organize Shorts on the channel',
+        'privacy.li11b.3': 'OAuth authorization tokens granted by Google/YouTube, stored securely and used exclusively to authenticate RaRo Shorts with the YouTube API',
+        'privacy.p11b5': 'This data is not sold or shared with third parties. It remains stored while the RaRo Shorts tool is in use, and authorization tokens can be revoked at any time on the',
+        'privacy.p11b6': 'To request deletion of this data, please contact us at',
+        'privacy.h12': '16. Contact Us',
         'privacy.p12': 'If you have any questions about this Privacy Policy or our privacy practices, please contact us at:'
     }
 };
