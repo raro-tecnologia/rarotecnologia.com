@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Escolhas da Letícya · Montanucci Oro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--vinho:#5a0f12;--vinho2:#2b0608;--creme:#f3ece1;--ouro:#c9a56a;--hd:'Bodoni Moda',Georgia,serif;--bd:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--vinho2);color:var(--creme);font-family:var(--bd);font-weight:300;overflow-x:hidden}
+.palco{position:relative;height:100svh;min-height:640px;overflow:hidden;
+  background:radial-gradient(ellipse 60% 55% at 50% 52%,#7a1a1d 0%,#4a0c0f 45%,#240506 100%)}
+/* luz suave atrás dela */
+.palco::before{content:"";position:absolute;left:50%;top:50%;width:70vmin;height:70vmin;transform:translate(-50%,-48%);
+  background:radial-gradient(circle,rgba(243,226,200,.22),rgba(243,226,200,0) 65%);filter:blur(10px);pointer-events:none}
+/* textura de grão fino */
+.palco::after{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.topo{position:absolute;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;padding:28px 16px;pointer-events:none}
+.marca{font-family:var(--hd);letter-spacing:.32em;text-transform:uppercase;font-size:15px;text-align:center}
+.marca small{display:block;font-family:var(--bd);font-size:9px;letter-spacing:.6em;color:var(--ouro);margin-top:4px}
+.titulo{position:absolute;left:0;right:0;bottom:0;z-index:200;text-align:center;padding:16vh 16px 7vh;pointer-events:none;
+  background:linear-gradient(180deg,rgba(36,5,6,0),rgba(36,5,6,.72) 55%,rgba(36,5,6,.9))}
+.titulo .kick{font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:var(--ouro)}
+.titulo h1{font-family:var(--hd);font-weight:400;font-style:italic;font-size:clamp(34px,5.4vw,68px);line-height:1.05;margin-top:12px;
+  text-shadow:0 2px 30px rgba(20,2,3,.6);opacity:0;transform:translateY(14px);transition:opacity 1.6s ease,transform 1.6s ease}
+.titulo .peca{margin-top:16px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,236,225,.75);min-height:1.4em;transition:opacity .5s}
+.pronto .titulo h1{opacity:1;transform:none}
+/* cena */
+.cena{position:absolute;inset:0}
+.pessoa{position:absolute;left:50%;bottom:0;height:86%;transform:translateX(-50%);z-index:100;
+  filter:drop-shadow(0 30px 60px rgba(20,2,3,.55));opacity:0;transition:opacity 1.4s ease}
+.pronto .pessoa,.vendo .pessoa{opacity:1}
+.card{position:absolute;left:0;top:0;width:var(--w);aspect-ratio:3/4;border-radius:999px 999px 6px 6px;overflow:hidden;
+  background:#1d0405;box-shadow:0 18px 40px rgba(15,1,2,.55);outline:1px solid rgba(201,165,106,.55);outline-offset:-7px;
+  will-change:transform,opacity,filter;cursor:pointer}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,240,220,.10),rgba(0,0,0,0) 40%,rgba(20,2,3,.25))}
+/* poeira dourada */
+.po{position:absolute;width:3px;height:3px;border-radius:50%;background:#e9cf9a;box-shadow:0 0 8px #e9cf9a;opacity:0;pointer-events:none;z-index:150}
+.dica{position:absolute;right:20px;bottom:22px;z-index:200;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(243,236,225,.45)}
+.card{transition:box-shadow .4s,outline-color .4s}
+.card.foco{outline-color:rgba(233,207,154,.95);box-shadow:0 26px 60px rgba(15,1,2,.7),0 0 0 1px rgba(233,207,154,.35)}
+.card .ver{position:absolute;left:0;right:0;bottom:12%;text-align:center;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .4s;z-index:2;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.card.foco .ver{opacity:.9}
+/* lupa: tela cheia com a peça em resolução máxima */
+.lupa{position:fixed;inset:0;z-index:1000;background:rgba(18,3,4,.96);display:none;overflow:hidden;cursor:zoom-in;touch-action:none}
+.lupa.aberta{display:block;animation:entra .5s ease}
+@keyframes entra{from{opacity:0}to{opacity:1}}
+.lupa img{position:absolute;left:0;top:0;transform-origin:0 0;max-width:none;user-select:none;-webkit-user-drag:none;will-change:transform}
+.lupa.zoom{cursor:zoom-out}
+.lupa .info{position:absolute;left:0;right:0;bottom:0;padding:22px 24px 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(18,3,4,0),rgba(18,3,4,.85))}
+.lupa .info h2{font-family:var(--hd);font-weight:400;font-style:italic;font-size:clamp(22px,3vw,34px)}
+.lupa .info p{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);margin-top:8px}
+.lupa .info a{pointer-events:auto;color:var(--creme);font-size:10px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ouro);padding-bottom:4px;white-space:nowrap}
+.lupa .fechar{position:absolute;top:18px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(233,207,154,.5);background:rgba(18,3,4,.5);color:var(--creme);font-size:20px;cursor:pointer;z-index:3}
+.lupa .carregando{position:absolute;top:26px;left:24px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(243,236,225,.6)}
+.lupa .nivel{position:absolute;top:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(243,236,225,.55)}
+@media (max-width:700px){.pessoa{height:72%}.titulo{padding-bottom:5vh}.dica{display:none}}
+@media (prefers-reduced-motion:reduce){.titulo h1,.pessoa{transition:none}}
+</style>
+</head>
+<body>
+<section class="palco" id="palco">
+  <header class="topo"><div class="marca">Montanucci<small>Oro</small></div></header>
+  <div class="cena" id="cena">
+    <img class="pessoa" src="leticya.webp" alt="Letícya Montanucci">
+  </div>
+  <div class="titulo">
+    <div class="kick">Escolhas da Letícya</div>
+    <h1>Clássico à sua maneira.</h1>
+    <div class="peca" id="peca">&nbsp;</div>
+  </div>
+  <div class="dica">clique numa peça para ver de perto</div>
+</section>
+<div class="lupa" id="lupa" aria-modal="true" role="dialog">
+  <img id="lupaImg" alt="">
+  <div class="carregando" id="lupaCarr">carregando detalhes…</div>
+  <div class="nivel" id="lupaNivel"></div>
+  <button class="fechar" id="lupaFechar" aria-label="Fechar">×</button>
+  <div class="info"><div><h2 id="lupaNome"></h2><p>Escolhas da Letícya</p></div><a id="lupaLink" target="_blank" rel="noopener">Ver a peça</a></div>
+</div>
+
+<script>
+const LOJA = 'https://www.montanuccioro.com.br/produtos/';
+const PECAS = [
+  ['elo-cadeado', 'Corrente Elo Cadeado', '50% 40%', 'corrente-elo-cadeado-xlhxt'],
+  ['toi-et-moi', 'Anel Toi et Moi', '45% 35%', 'anel-toi-et-moi-1g73e'],
+  ['paraiba', 'Diamante Princess e Paraíbas', '35% 40%', 'anel-com-diamante-princess-e-turmalinas-paraibas-brasileiras-1t7qw'],
+  ['agua-marinha', 'Colar água-marinha', '70% 45%', 'colar-com-pingente-de-agua-marinha-e-diamante-10flc'],
+  ['tres-pedras', 'Anel de três pedras', '50% 40%', 'anel-de-tres-pedras-com-diamante-oval-central-e-gotas-laterais-mkd7x'],
+  ['brinco-esmeralda', 'Brinco de esmeralda', '50% 40%', 'brinco-de-esmeralda-com-diamantes-em-ouro-amarelo-120p5'],
+  ['brinco-oval', 'Brinco de esmeralda oval', '50% 40%', 'brinco-de-esmeralda-oval-com-diamantes-yd5zz'],
+  ['colar-esmeralda', 'Colar de esmeralda', '50% 45%', 'colar-com-pingente-de-esmeralda-oval-e-diamantes-128a4'],
+];
+const palco = document.getElementById('palco'), cena = document.getElementById('cena'), rotulo = document.getElementById('peca');
+const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (innerWidth < 700) PECAS.splice(6);
+const cards = PECAS.map(([slug, nome, pos, loja], i) => {
+  const d = document.createElement('div'); d.className = 'card';
+  d.innerHTML = `<img src="pecas/${slug}-card.jpg" alt="${nome}" style="object-position:${pos}"><span class="ver">ver de perto</span>`;
+  Object.assign(d.dataset, { nome, slug, loja: LOJA + loja + '/' }); cena.appendChild(d); return d;
+});
+// poeira
+const poeira = Array.from({ length: 26 }, () => { const p = document.createElement('i'); p.className = 'po'; cena.appendChild(p);
+  return { el: p, x: Math.random(), y: Math.random(), v: .015 + Math.random() * .03, f: Math.random() * 6.28 }; });
+
+let W, H, cx, cy, rx, rz, alt, w;
+function medir() {
+  W = palco.clientWidth; H = palco.clientHeight;
+  const mob = W < 700;
+  cx = W / 2; cy = H * (mob ? .52 : .50);
+  rx = Math.min(W * (mob ? .40 : .36), 640); rz = 1; alt = H * (mob ? .10 : .15);
+  w = Math.round(Math.min(Math.max(W * (mob ? .24 : .13), 92), 230));
+  cards.forEach(c => c.style.setProperty('--w', w + 'px'));
+}
+medir(); addEventListener('resize', medir);
+
+// giro: começa rápido saindo de trás dela e desacelera até um passeio lento
+let ang = Math.PI, vel = reduz ? 0 : 7.5, alvo = 0.16, pausa = false, t0 = performance.now(), last = t0;
+palco.addEventListener('mouseenter', () => pausa = true);
+palco.addEventListener('mouseleave', () => pausa = false);
+setTimeout(() => palco.classList.add('vendo'), 50);
+setTimeout(() => palco.classList.add('pronto'), reduz ? 0 : 1800);
+
+function quadro(now) {
+  const dt = Math.min((now - last) / 1000, .05); last = now;
+  const t = (now - t0) / 1000;
+  const meta = pausa ? 0 : alvo;
+  vel += (meta - vel) * (1 - Math.exp(-dt / (vel > 1 ? .9 : .6)));
+  ang += vel * dt;
+  const abre = reduz ? 1 : Math.min(1, t / 1.6), ease = 1 - Math.pow(1 - abre, 3);
+  let frente = null, melhor = -2;
+  cards.forEach((c, i) => {
+    const a = ang + i * (Math.PI * 2 / cards.length);
+    const s = Math.sin(a), z = Math.cos(a);            // z>0 = na frente dela
+    const x = cx + s * rx * ease;
+    const y = cy - z * alt * -1 * ease - (1 - ease) * 40;   // frente mais baixa (colo), atrás mais alta (cabeça)
+    const esc = .56 + (z + 1) * .19;
+    const op = Math.min(1, ease * 1.4) * (.55 + (z + 1) * .225);
+    const blur = z < 0 ? (-z) * 2.2 : 0;
+    const rot = s * -14;
+    c.style.transform = `translate(${x - w / 2}px,${y - w * .66}px) scale(${esc}) rotateY(${rot}deg)`;
+    c.style.opacity = op.toFixed(3);
+    c.style.filter = `blur(${blur.toFixed(2)}px) brightness(${(.62 + (z + 1) * .2).toFixed(3)})`;
+    c.style.zIndex = z > 0 ? 101 + Math.round(z * 40) : 99 - Math.round(-z * 40);
+    if (z > melhor) { melhor = z; frente = c; }
+  });
+  if (frente && melhor > .93 && vel < .5) { if (rotulo.textContent !== frente.dataset.nome) { rotulo.textContent = frente.dataset.nome; } rotulo.style.opacity = 1; }
+  else rotulo.style.opacity = 0;
+  poeira.forEach(p => {
+    p.y -= p.v * dt; if (p.y < -.05) { p.y = 1.05; p.x = Math.random(); }
+    const xx = (p.x + Math.sin(t * .4 + p.f) * .01) * W, yy = p.y * H;
+    p.el.style.transform = `translate(${xx}px,${yy}px)`;
+    p.el.style.opacity = (Math.sin(t * 1.3 + p.f) * .5 + .5) * .55 * Math.min(1, t / 2);
+  });
+  requestAnimationFrame(quadro);
+}
+requestAnimationFrame(quadro);
+// ---------- lupa: a peça em resolução máxima, com zoom até o limite do arquivo ----------
+// [largura, altura, detalhe real] — o terceiro número vem de pecas/nitidez.json (medido: a foto só tem detalhe de verdade até essa escala)
+// (fotos ampliadas com Real-ESRGAN a partir do detalhe real — pecas/upscale.json; por isso "real" agora é 1)
+const DIM = { 'elo-cadeado': [3150, 5600, 1], 'toi-et-moi': [3150, 5600, 1], 'paraiba': [2714, 4826, 1], 'agua-marinha': [3150, 5600, 1],
+  'tres-pedras': [3150, 5600, 1], 'brinco-esmeralda': [3150, 5600, 1], 'brinco-oval': [3152, 5600, 1], 'colar-esmeralda': [3150, 5600, 1] };
+// telas de alta densidade (celular) já ampliam cada pixel; o limite considera isso para nunca estourar
+const DENS = Math.max(1, (devicePixelRatio || 1) / 2);
+const lupa = document.getElementById('lupa'), li = document.getElementById('lupaImg'), carr = document.getElementById('lupaCarr'), nivel = document.getElementById('lupaNivel');
+let iw = 1, ih = 1, s = 1, sAlvo = 1, tx = 0, ty = 0, txA = 0, tyA = 0, fitS = 1, maxS = 1, aberta = false, fx = .5, fy = .5;
+const vw = () => innerWidth, vh = () => innerHeight;
+function posicaoAlvo() {   // a imagem acompanha o ponteiro: borda a borda conforme o mouse anda
+  const lw = iw * sAlvo, lh = ih * sAlvo;
+  txA = lw <= vw() ? (vw() - lw) / 2 : -(lw - vw()) * fx;
+  tyA = lh <= vh() ? (vh() - lh) / 2 : -(lh - vh()) * fy;
+}
+function abrir(c) {
+  const [w, h, real] = DIM[c.dataset.slug]; iw = w; ih = h;
+  fitS = Math.min(vw() / iw, vh() / ih) * .94; maxS = Math.max(fitS * 1.2, real / DENS);
+  s = sAlvo = fitS; fx = fy = .5; posicaoAlvo(); tx = txA; ty = tyA;
+  li.style.width = iw + 'px'; li.style.height = ih + 'px';
+  li.src = `pecas/${c.dataset.slug}-card.jpg`; carr.style.display = 'block';
+  const alta = new Image(); alta.onload = () => { if (aberta) { li.src = alta.src; carr.style.display = 'none'; } }; alta.src = `pecas/${c.dataset.slug}-zoom.jpg`;
+  li.alt = c.dataset.nome; document.getElementById('lupaNome').textContent = c.dataset.nome;
+  document.getElementById('lupaLink').href = c.dataset.loja;
+  lupa.classList.add('aberta'); lupa.classList.remove('zoom'); aberta = true; pausa = true;
+  requestAnimationFrame(animaLupa);
+}
+function fechar() { lupa.classList.remove('aberta'); aberta = false; pausa = false; }
+function animaLupa() {
+  if (!aberta) return;
+  s += (sAlvo - s) * .14; posicaoAlvo(); tx += (txA - tx) * .14; ty += (tyA - ty) * .14;
+  li.style.transform = `translate(${tx}px,${ty}px) scale(${s})`;
+  nivel.textContent = s > fitS * 1.05 ? Math.round(s / fitS * 100) / 100 + '× · ' + (s >= maxS * .97 ? 'limite da foto' : 'role para aproximar') : '';
+  requestAnimationFrame(animaLupa);
+}
+const fino = matchMedia('(pointer:fine)').matches;
+lupa.addEventListener('mousemove', e => { fx = e.clientX / vw(); fy = e.clientY / vh(); if (fino && sAlvo === fitS && !lupa.dataset.fixo) { sAlvo = maxS; lupa.classList.add('zoom'); } });
+lupa.addEventListener('wheel', e => { e.preventDefault(); sAlvo = Math.min(maxS, Math.max(fitS, sAlvo * (e.deltaY < 0 ? 1.15 : 1 / 1.15))); lupa.classList.toggle('zoom', sAlvo > fitS); }, { passive: false });
+lupa.addEventListener('click', e => {
+  if (e.target.closest('.fechar,a')) return;
+  fx = e.clientX / vw(); fy = e.clientY / vh();
+  if (sAlvo > fitS) { sAlvo = fitS; lupa.dataset.fixo = '1'; lupa.classList.remove('zoom'); }
+  else { sAlvo = maxS; delete lupa.dataset.fixo; lupa.classList.add('zoom'); }
+});
+// toque: arrastar navega pela peça quando aproximada
+let toque = null;
+lupa.addEventListener('touchstart', e => { const t = e.touches[0]; toque = { x: t.clientX, y: t.clientY, fx, fy }; }, { passive: true });
+lupa.addEventListener('touchmove', e => { if (!toque || sAlvo === fitS) return; const t = e.touches[0];
+  fx = Math.min(1, Math.max(0, toque.fx - (t.clientX - toque.x) / (iw * sAlvo - vw() || 1)));
+  fy = Math.min(1, Math.max(0, toque.fy - (t.clientY - toque.y) / (ih * sAlvo - vh() || 1))); }, { passive: true });
+document.getElementById('lupaFechar').addEventListener('click', fechar);
+addEventListener('keydown', e => { if (e.key === 'Escape' && aberta) fechar(); });
+cards.forEach(c => {
+  c.addEventListener('mouseenter', () => { c.classList.add('foco'); rotulo.textContent = c.dataset.nome; rotulo.style.opacity = 1; });
+  c.addEventListener('mouseleave', () => c.classList.remove('foco'));
+  c.addEventListener('click', () => { delete lupa.dataset.fixo; abrir(c); });
+});
+</script>
+</body>
+</html>

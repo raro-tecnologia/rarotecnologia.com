@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurante Cantinho da Vovó · Restaurante e marmitas</title>
+<meta name="description" content="Buffet livre ou por quilo e marmitas, com tempero natural e ingredientes fresquinhos, na Zona 10 de Maringá.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14100d;--bg2:#1d1712;--fg:#f4ecdf;--mut:#b9ab97;--acc:#e0a63a;--acc2:#c8352b;--on:#1a120a;--card:#241c15;--line:#3a2f24;--hd:'Fraunces',Georgia,serif;--bd:'Inter',system-ui,sans-serif;--rad:18px;--acc:#e8a020;--acc2:#d0432e;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--bd);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin:0 auto}
+h1,h2,h3{font-family:var(--hd);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.t-autoral h1,.t-autoral h2,.t-autoral h3,.t-autoral .logo{font-weight:400;letter-spacing:.005em}
+.t-autoral .hero h1{line-height:1.02}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.5em;background:var(--acc);color:var(--on);font-weight:600;text-decoration:none;border-radius:var(--rad);font-size:1rem;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.sec{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn svg{width:1.25em;height:1.25em;fill:currentColor}
+/* topo */
+.hero{position:relative;min-height:min(92svh,780px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:#000 center/cover no-repeat}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.05) 30%,rgba(0,0,0,.0) 35%,rgba(10,8,6,.88) 100%)}
+.nav{position:absolute;top:0;left:0;right:0;padding:18px 0;color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--hd);font-size:1.25rem;font-weight:700;letter-spacing:.02em;color:#fff;text-decoration:none}
+.nav a.mini{font-size:.85rem;text-decoration:none;border:1px solid rgba(255,255,255,.6);padding:.45em 1em;border-radius:99px;color:#fff}
+.hero-in{padding:0 0 44px;color:#fff;width:100%}
+.cat{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;opacity:.9;margin-bottom:.9rem;display:flex;gap:.8em;align-items:center;flex-wrap:wrap}
+.nota{background:rgba(255,255,255,.16);backdrop-filter:blur(6px);padding:.3em .8em;border-radius:99px;letter-spacing:0;text-transform:none;font-size:.85rem}
+.nota b{color:#ffd36b}
+.hero h1{font-size:clamp(2.5rem,10.5vw,5.6rem);margin-bottom:1rem;max-width:14ch;color:#fff}
+.hero p.sub{font-size:1.08rem;max-width:34ch;opacity:.92;margin-bottom:1.6rem;color:#f2efe9}
+.hero .cta{display:flex;gap:.7rem;flex-wrap:wrap}
+.hero .btn.sec{color:#fff;border-color:rgba(255,255,255,.55)}
+section{padding:72px 0}
+.kick{letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--acc2);margin-bottom:.8rem;font-weight:600}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin-bottom:1.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.6rem}
+.chip{border:1px solid var(--line);padding:.35em .9em;border-radius:99px;font-size:.85rem;color:var(--mut)}
+.sobre{display:grid;gap:2rem}
+.sobre p{color:var(--mut);font-size:1.05rem;margin-bottom:1rem;max-width:60ch}
+.sobre .foto{border-radius:var(--rad);overflow:hidden;aspect-ratio:4/5}
+.sobre .foto img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.4rem}
+.stat b{display:block;font-family:var(--hd);font-size:2.2rem;line-height:1;color:var(--acc)}
+.stat span{font-size:.8rem;color:var(--mut)}
+.alt{background:var(--bg2)}
+.cards{display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:1.5rem}
+.card .num{font-family:var(--hd);color:var(--acc2);font-size:1rem}
+.card h3{font-size:1.5rem;margin:.3rem 0 .5rem}
+.card p{color:var(--mut);font-size:.97rem}
+.car-bloco{margin-bottom:2.6rem}
+.car-t{font-size:1.4rem;margin-bottom:.9rem}
+.car{position:relative}
+.track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-radius:var(--rad)}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible,.nav-b:focus-visible,.dot:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.slide{flex:0 0 82%;scroll-snap-align:center;aspect-ratio:var(--asp,4/5);overflow:hidden;border-radius:var(--rad);background:var(--bg2)}
+.slide img{width:100%;height:100%;object-fit:cover;user-select:none}
+.nav-b{display:none;position:absolute;top:calc(50% - 22px);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#222;font-size:1.7rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:2}
+.nav-b:disabled{opacity:.35;cursor:default}
+.prev{left:10px}.next{right:10px}
+.dots{display:flex;justify-content:center;gap:4px;margin-top:6px}
+.dot{width:24px;height:24px;border:0;background:none;cursor:pointer;position:relative;padding:0}
+.dot::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--line);transition:all .2s}
+.dot[aria-current="true"]::after{background:var(--acc);width:22px;margin-left:-11px;border-radius:6px}
+@media(hover:hover) and (min-width:760px){.nav-b{display:block}}
+.gal{column-count:2;column-gap:8px}
+.g{overflow:hidden;border-radius:var(--rad);background:var(--bg2);margin-bottom:8px;break-inside:avoid}
+.g img{width:100%;height:auto;transition:transform .5s}
+.g:hover img{transform:scale(1.04)}
+.deps{display:grid;gap:14px}
+.dep{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:1.5rem}
+.stars{color:var(--acc2);letter-spacing:.15em;margin-bottom:.6rem}
+.dep p{font-family:var(--hd);font-size:1.2rem;line-height:1.35;margin-bottom:.8rem}
+.dep footer{font-size:.85rem;color:var(--mut)}
+.dep footer span{opacity:.8}
+.info{display:grid;gap:2rem}
+.info ul{list-style:none}
+.info li{display:flex;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.info li span{color:var(--mut)}
+.info li span::first-letter{text-transform:uppercase}
+.info address{font-style:normal;color:var(--mut);margin-bottom:1.2rem}
+.fim{text-align:center;padding:84px 0}
+.fim h2{max-width:16ch;margin:0 auto 1.2rem}
+.fim p{color:var(--mut);margin-bottom:1.6rem}
+footer.rod{padding:28px 0 96px;text-align:center;font-size:.78rem;color:var(--mut);border-top:1px solid var(--line)}
+.fab{position:fixed;right:16px;bottom:16px;z-index:9;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.fab svg{width:30px;height:30px;fill:#fff}
+@media(min-width:760px){
+ section{padding:110px 0}
+ .sobre{grid-template-columns:1.1fr .9fr;align-items:center;gap:4rem}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .slide{flex-basis:calc((100% - 20px)/3)}
+ .gal{column-count:3;column-gap:10px}
+ .g{margin-bottom:10px}
+ .deps{grid-template-columns:repeat(2,1fr)}
+ .info{grid-template-columns:1fr 1fr;gap:4rem}
+}
+</style>
+</head>
+<body class="t-gastro">
+<header class="hero">
+  <div class="bg"><img src="img/google-03.jpg" alt="Restaurante Cantinho da Vovó"></div>
+  <div class="nav"><div class="wrap"><a class="logo" href="#">Cantinho da Vovó</a><a class="mini" href="https://wa.me/5544999604068?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20da%20Vov%C3%B3%20e%20quero%20ver%20o%20card%C3%A1pio%20de%20hoje.">WhatsApp</a></div></div>
+  <div class="hero-in"><div class="wrap">
+    <div class="cat"><span>Restaurante e marmitas · Maringá</span></div>
+    <h1>Comida caseira, feita na hora.</h1>
+    <p class="sub">Buffet livre ou por quilo e marmitas, com tempero natural e ingredientes fresquinhos, na Zona 10 de Maringá.</p>
+    <div class="cta"><a class="btn" href="https://wa.me/5544999604068?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20da%20Vov%C3%B3%20e%20quero%20ver%20o%20card%C3%A1pio%20de%20hoje."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.33-2 1.4-.52.07-1.17.1-1.9-.12a17 17 0 0 1-1.72-.64c-3-1.3-4.95-4.33-5.1-4.53-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.45c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.93 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.1 1.32 2.4 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.72-.18 1.4Z"/></svg> Pedir marmita no WhatsApp</a></div>
+  </div></div>
+</header>
+
+<section id="sobre"><div class="wrap sobre">
+  <div>
+    <div class="kick">Nossa cozinha</div>
+    <h2>Comer bem, de forma saudável</h2>
+    <div class="chips"><span class="chip">Buffet livre ou por quilo</span><span class="chip">Marmitas</span><span class="chip">Sem temperos industrializados</span></div>
+    <p>O Cantinho da Vovó é o restaurante para quem quer comer bem e com saúde: uma cozinha livre de temperos industrializados, que usa só temperos naturais e ingredientes fresquinhos.</p><p>O buffet tem ampla variedade de saladas e opções, e você pode comer no salão ou pedir a sua marmita.</p>
+    <div class="stats"><div class="stat"><b>4,6</b><span>nota no Google</span></div><div class="stat"><b>283</b><span>avaliações</span></div></div>
+  </div>
+  <div class="foto"><img loading="lazy" src="img/google-04.jpg" alt="Restaurante Cantinho da Vovó"></div>
+</div></section>
+
+<section class="alt" id="servicos"><div class="wrap">
+  <div class="kick">No cardápio</div>
+  <h2>O que você encontra por aqui</h2>
+  <div class="cards"><article class="card"><span class="num">01</span><h3>Buffet</h3><p>Livre ou por quilo, com variedade de saladas e pratos caseiros preparados na hora.</p></article><article class="card"><span class="num">02</span><h3>Marmitas</h3><p>Delivery de marmitas para o almoço de quem não pode sair do trabalho ou de casa.</p></article><article class="card"><span class="num">03</span><h3>Grelhados na hora</h3><p>Bife fritinho na hora, um dos pratos mais elogiados pelos clientes.</p></article></div>
+</div></section>
+
+<section id="galeria"><div class="wrap">
+  <div class="kick">Da cozinha para a mesa</div>
+  <h2>Dá vontade, né?</h2>
+  <div class="car-bloco"><h3 class="car-t">Pratos e marmitas</h3>
+  <div class="car" id="car0" data-car style="--asp:4/3" role="region" aria-roledescription="carrossel" aria-label="Pratos e marmitas">
+    <div class="track" tabindex="0"><figure class="slide" role="group" aria-roledescription="slide" aria-label="1 de 4"><img src="img/google-09.jpg" alt="Prato com bife, arroz e batata frita" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="2 de 4"><img src="img/google-07.jpg" alt="Marmita saudável com legumes" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="3 de 4"><img loading="lazy" src="img/google-08.jpg" alt="Saladas do buffet" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="4 de 4"><img loading="lazy" src="img/google-02.jpg" alt="Carne na chapa" draggable="false"></figure></div>
+    <button type="button" class="nav-b prev" aria-label="Foto anterior">&#8249;</button>
+    <button type="button" class="nav-b next" aria-label="Próxima foto">&#8250;</button>
+    <div class="dots"><button type="button" class="dot" aria-label="Ir para a foto 1" aria-current="true"></button><button type="button" class="dot" aria-label="Ir para a foto 2" ></button><button type="button" class="dot" aria-label="Ir para a foto 3" ></button><button type="button" class="dot" aria-label="Ir para a foto 4" ></button></div>
+  </div></div><div class="car-bloco"><h3 class="car-t">O restaurante</h3>
+  <div class="car" id="car1" data-car style="--asp:1/1" role="region" aria-roledescription="carrossel" aria-label="O restaurante">
+    <div class="track" tabindex="0"><figure class="slide" role="group" aria-roledescription="slide" aria-label="1 de 4"><img src="img/google-05.jpg" alt="Salão do restaurante" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="2 de 4"><img src="img/google-04.jpg" alt="Buffet" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="3 de 4"><img loading="lazy" src="img/google-01.jpg" alt="Fachada do Cantinho da Vovó" draggable="false"></figure><figure class="slide" role="group" aria-roledescription="slide" aria-label="4 de 4"><img loading="lazy" src="img/google-06.jpg" alt="Entrada do restaurante" draggable="false"></figure></div>
+    <button type="button" class="nav-b prev" aria-label="Foto anterior">&#8249;</button>
+    <button type="button" class="nav-b next" aria-label="Próxima foto">&#8250;</button>
+    <div class="dots"><button type="button" class="dot" aria-label="Ir para a foto 1" aria-current="true"></button><button type="button" class="dot" aria-label="Ir para a foto 2" ></button><button type="button" class="dot" aria-label="Ir para a foto 3" ></button><button type="button" class="dot" aria-label="Ir para a foto 4" ></button></div>
+  </div></div>
+  
+</div></section>
+
+<section class="alt" id="depoimentos"><div class="wrap">
+  <div class="kick">Quem já provou</div>
+  <h2>Quem já almoçou</h2>
+  <div class="deps"><blockquote class="dep"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“Comida muito saborosa, preço justo atendimento diferenciado”</p><footer>Suzanne C. <span>· avaliação no Google</span></footer></blockquote><blockquote class="dep"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“Comida muitíssima gostosa. Atendimento acolhedor.”</p><footer>Evaldo S. <span>· avaliação no Google</span></footer></blockquote><blockquote class="dep"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“Um ótimo lugar para almoçar.
+Comida muito boa.
+Atendimento nota dez.
+Preços justos.
+Vale apena conhecer!”</p><footer>Celso Q. <span>· avaliação no Google</span></footer></blockquote></div>
+</div></section>
+
+<section id="visite"><div class="wrap info">
+  <div>
+    <div class="kick">Onde e quando</div>
+    <h2>Venha almoçar</h2>
+    <address>Av. Mauá, 2924 · Zona 10 · Maringá, PR · CEP 87013-311</address>
+    <a class="btn sec" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Cantinho%20da%20Vov%C3%B3%20Maring%C3%A1%20l%20Comida%20Caseira%20l%20Marmita%20l%20Feijoada&amp;query_place_id=ChIJm2Ohw27R7JQROm8XXmQnJf0">Abrir no Google Maps</a>
+  </div>
+  <ul aria-label="Horários"><li><span>segunda</span><b>10h30 às 14h30</b></li><li><span>terça</span><b>Fechado</b></li><li><span>quarta a sábado</span><b>10h30 às 14h30</b></li><li><span>domingo</span><b>Fechado</b></li></ul>
+</div></section>
+
+<section class="fim alt"><div class="wrap">
+  <h2>Qual é o prato de hoje?</h2>
+  <p>Chame no WhatsApp para ver o cardápio e pedir a sua marmita.</p>
+  <a class="btn" href="https://wa.me/5544999604068?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20da%20Vov%C3%B3%20e%20quero%20ver%20o%20card%C3%A1pio%20de%20hoje."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.33-2 1.4-.52.07-1.17.1-1.9-.12a17 17 0 0 1-1.72-.64c-3-1.3-4.95-4.33-5.1-4.53-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.45c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.93 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.1 1.32 2.4 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.72-.18 1.4Z"/></svg> Pedir marmita no WhatsApp</a>
+</div></section>
+
+<footer class="rod"><div class="wrap">Site piloto criado pela Prontto.AI para Restaurante Cantinho da Vovó · BNI Friday</div></footer>
+<a class="fab" href="https://wa.me/5544999604068?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Cantinho%20da%20Vov%C3%B3%20e%20quero%20ver%20o%20card%C3%A1pio%20de%20hoje." aria-label="Chamar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14.1c-.25.7-1.45 1.33-2 1.4-.52.07-1.17.1-1.9-.12a17 17 0 0 1-1.72-.64c-3-1.3-4.95-4.33-5.1-4.53-.15-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.45c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.93 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.1 1.32 2.4 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.72-.18 1.4Z"/></svg></a>
+<script>
+document.querySelectorAll('[data-car]').forEach(function(car){
+  var t=car.querySelector('.track'),s=t.children,d=car.querySelectorAll('.dot'),p=car.querySelector('.prev'),n=car.querySelector('.next');
+  function step(){return s[0].getBoundingClientRect().width+parseFloat(getComputedStyle(t).columnGap||0);}
+  function idx(){return Math.max(0,Math.min(s.length-1,Math.round(t.scrollLeft/step())));}
+  function upd(){var i=idx();d.forEach(function(x,k){if(k===i)x.setAttribute('aria-current','true');else x.removeAttribute('aria-current');});p.disabled=t.scrollLeft<4;n.disabled=t.scrollLeft+t.clientWidth>=t.scrollWidth-4;}
+  function go(i){t.scrollTo({left:i*step(),behavior:'smooth'});}
+  p.onclick=function(){go(idx()-1);};n.onclick=function(){go(idx()+1);};
+  d.forEach(function(x,k){x.onclick=function(){go(k);};});
+  t.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
+  t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(idx()+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(idx()-1);}});
+  window.addEventListener('resize',upd);upd();
+});
+</script>
+</body>
+</html>

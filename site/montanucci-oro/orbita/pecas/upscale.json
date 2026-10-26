@@ -1,0 +1,50 @@
+{
+ "agua-marinha": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.59
+ },
+ "brinco-esmeralda": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.32
+ },
+ "brinco-oval": {
+  "w": 3152,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.43
+ },
+ "colar-esmeralda": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.93
+ },
+ "elo-cadeado": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.87
+ },
+ "paraiba": {
+  "w": 2714,
+  "h": 4826,
+  "real": 1,
+  "upscale": 2
+ },
+ "toi-et-moi": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.32
+ },
+ "tres-pedras": {
+  "w": 3150,
+  "h": 5600,
+  "real": 1,
+  "upscale": 1.87
+ }
+}
