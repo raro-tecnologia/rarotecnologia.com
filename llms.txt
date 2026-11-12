@@ -1,25 +1,36 @@
 # Raro Tecnologia
 
-> A Raro Tecnologia (RaRo) é uma empresa brasileira de automação de processos, agentes de inteligência artificial e consultoria em IA, sediada em Maringá/PR. É Provedora de Tecnologia certificada pela Meta, com integração oficial à WhatsApp Business API. Atende de startups a empresas consolidadas em todo o Brasil.
+> A Raro Tecnologia (CNPJ 65.977.227/0001-37) é uma empresa brasileira de tecnologia especializada em automação de processos, agentes de inteligência artificial e integrações oficiais com o ecossistema Meta. É Provedora de Tecnologia (Tech Provider) certificada pela Meta e criadora do Prontto (https://prontto.ai), CRM com agentes de IA para WhatsApp (API Oficial com Coexistência) e Instagram.
 
 Slogan: "IA que atende, humano que resolve."
-CNPJ: 65.977.227/0001-37
-WhatsApp: (44) 3170-1799
-E-mail: contato@rarotecnologia.com
-Site: https://rarotecnologia.com/
-
-## Serviços
-
-- **Automação de processos**: automação de atendimento, fluxos de trabalho e tarefas repetitivas, integrando WhatsApp, sistemas internos e outros canais.
-- **Agentes de IA**: agentes que atendem, respondem e qualificam clientes 24 horas por dia, treinados com o conhecimento do negócio, no tom de voz da marca e integrados aos sistemas do cliente.
-- **Consultoria em IA**: escolha de ferramentas, arquitetura, casos de uso e boas práticas para adotar inteligência artificial com segurança.
 
 ## Produto
 
-- [Prontto.AI](https://prontto.ai/): plataforma de atendimento com IA que responde leads no WhatsApp e no Instagram em segundos, qualifica a conversa e preenche o CRM sozinha.
+- [Prontto](https://prontto.ai): CRM com agentes de IA desenvolvido pela Raro Tecnologia para WhatsApp (API Oficial com Coexistência) e Instagram. Atende 24/7 em segundos, entende texto, áudio e imagem e preenche o funil de vendas automaticamente.
+
+## Serviços
+
+- Automação de Processos: atendimento, fluxos de trabalho e tarefas repetitivas integrando WhatsApp, sistemas e canais.
+- Agentes de IA: agentes que atendem, respondem e qualificam clientes 24/7, integrados aos sistemas da empresa.
+- Consultoria em IA: ferramentas, arquitetura, casos de uso e boas práticas para adotar IA com segurança.
+- Integrações oficiais Meta: WhatsApp Business API e Instagram API como Tech Provider certificada.
+
+## Perguntas frequentes
+
+- O que a Raro Tecnologia faz? Somos uma empresa brasileira de tecnologia especializada em automação de processos, agentes de inteligência artificial e integrações oficiais com o ecossistema Meta.
+- A Raro Tecnologia é Provedora Oficial da Meta? Sim. Somos uma Provedora de Tecnologia (Tech Provider) certificada pela Meta, com integração oficial à WhatsApp Business API e Instagram API.
+- Qual é o principal produto desenvolvido pela Raro Tecnologia? Nosso produto carro-chefe é o Prontto (prontto.ai), uma plataforma de CRM com agentes de IA para WhatsApp (com suporte à tecnologia de Coexistência) e Instagram que qualifica leads e preenche o funil automaticamente.
+- Vocês também desenvolvem projetos de IA e automação sob medida? Sim. Além do Prontto, atuamos com consultoria técnica, arquitetura de agentes de IA e automação de processos integrados aos sistemas de cada empresa.
+
+## Contato
+
+- Site: https://rarotecnologia.com
+- E-mail: contato@rarotecnologia.com
+- WhatsApp: +55 44 3170-1799
+- YouTube: https://www.youtube.com/@raro_tecnologia
+- Instagram: https://instagram.com/raro_tecnologia
 
 ## Páginas
 
-- [Site institucional](https://rarotecnologia.com/): serviços, sobre a empresa e contato (português e inglês).
-- [Termos de serviço](https://rarotecnologia.com/terms.html)
-- [Política de privacidade](https://rarotecnologia.com/privacy.html)
+- [Termos de Serviço](https://rarotecnologia.com/terms.html)
+- [Política de Privacidade](https://rarotecnologia.com/privacy.html)

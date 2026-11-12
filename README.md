@@ -13,7 +13,7 @@ Site estático (HTML/CSS/JS, sem build) da **Raro Tecnologia**, com foco em **Au
 
 ```
 .
-├── index.html          # página principal (hero, métricas, serviços, sobre, contato)
+├── index.html          # página principal (hero, métricas, serviços, Prontto, sobre, FAQ, contato) + JSON-LD
 ├── terms.html          # termos de serviço
 ├── privacy.html        # política de privacidade
 ├── i18n.js             # traduções PT/EN (chaves data-i18n) e troca de idioma
@@ -27,7 +27,9 @@ Site estático (HTML/CSS/JS, sem build) da **Raro Tecnologia**, com foco em **Au
 ├── logo/               # símbolo (transparente/branco) em PNG e WebP (256/512/1024)
 ├── favicon/            # favicon.ico + PNG/WebP + apple-touch-icon
 ├── og-image.jpeg/.webp # imagem de compartilhamento social (1200×630)
-├── robots.txt
+├── robots.txt          # libera buscadores e crawlers de IA; aponta o sitemap
+├── sitemap.xml         # URLs públicas (atualizar <lastmod> ao publicar mudanças)
+├── llms.txt            # resumo da marca para motores de IA (GEO)
 └── CNAME               # domínio custom (rarotecnologia.com)
 ```
 
@@ -47,9 +49,13 @@ python3 -m http.server 8000
 - **Cache-busting:** ao alterar CSS ou JS, suba a versão `?v=N` no `@import` (para CSS) **e** nas tags `<link>`/`<script>` de `index.html`, `terms.html` e `privacy.html`.
 - **Nova página:** copie o bloco `<head>` do `index.html` (favicon + **Google Fonts** + `styles.css?v=N`) para garantir tipografia e logo idênticos.
 
+## SEO / GEO
+
+- Dados estruturados (`Organization`, `SoftwareApplication` do Prontto, `FAQPage`) ficam no `<script type="application/ld+json">` do `index.html`. Ao mudar uma pergunta do FAQ, atualize **o HTML, o `i18n.js` (PT/EN), o JSON-LD e o `llms.txt`** juntos.
+
 ## Contato / marca
 
-- WhatsApp: +55 44 3170-1799 · Instagram: [@raro_tecnologia](https://instagram.com/raro_tecnologia) · E-mail: contato@rarotecnologia.com
+- WhatsApp: +55 44 3170-1799 · YouTube: [@raro_tecnologia](https://www.youtube.com/@raro_tecnologia) · Instagram: [@raro_tecnologia](https://instagram.com/raro_tecnologia) · E-mail: contato@rarotecnologia.com
 - Uso da marca: **"Raro Tecnologia"** em texto/prosa; **"RARO"** apenas como marca/logo.
 
 ## Deploy

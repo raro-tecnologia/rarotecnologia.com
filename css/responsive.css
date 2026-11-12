@@ -7,7 +7,9 @@
     }
 
     .about-layout,
-    .contact-layout {
+    .contact-layout,
+    .faq-layout,
+    .product-feature {
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
     }
@@ -107,6 +109,8 @@
     .metric-value { font-size: 1.75rem; }
 
     .services,
+    .products,
+    .faq,
     .about,
     .contact {
         padding: var(--spacing-xl) 0;
@@ -146,6 +150,14 @@
     .about-card { padding: var(--spacing-lg); }
 
     .contact-card { padding: var(--spacing-lg); }
+
+    .product-feature { padding: var(--spacing-md); }
+
+    .product-feature-visual { padding: var(--spacing-md); }
+
+    .faq-item summary { padding: 1rem; }
+
+    .faq-answer { padding: 0 1rem 1rem; }
 
     .contact-item a { font-size: 1rem; }
 }
